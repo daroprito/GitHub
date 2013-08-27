@@ -1,0 +1,61 @@
+package nomina;
+import java.util.*;
+
+import javax.swing.JOptionPane;
+public class nomina {
+
+	public static void main (String g[]){
+		
+		int nume;
+		String[]ce= new String[50];
+		String[]es=new String[50];
+		int[]num=new int[50];
+		int[]suel=new int[50];
+	
+		int num1,suel1,total = 0;
+		String es1,ce1;
+		
+		Scanner in = new Scanner (System.in) ; 
+
+		System.out.println("ingrese el numero de empleados : " ) ; 
+		nume=in.nextInt(); 
+		
+		
+		for (int i=0;i<nume;i++){
+			
+			System.out.println("ingrese numero de cedula : ");
+			ce1=in.next();
+			
+			
+			System.out.println("ingrese nombre ");
+			es1=in.next();
+			
+			System.out.println("ingrese sueldo por hora : " ) ; 
+			num1=in.nextInt(); 
+			
+			System.out.println("ingrese horas trabajadas : " ) ; 
+			suel1=in.nextInt(); 
+		
+			num[i]=num1;
+			suel[i]=suel1;
+			es[i]=es1;
+			ce[i]=ce1;
+			
+		}
+		
+		for (int i=0;i<nume;i++){
+			
+			//total=total+num[i]+suel[i]; //toma el primer valor y lo incrementa con el segunto etc
+			total+=num[i]*suel[i];         // aka si toma cada valor independientemente 
+			
+			System.out.println(es[i]+" su nomina es "+total+" y su numero de cedula es "+ce[i]);
+			
+			
+			
+		
+		}
+		
+		
+	}
+	
+}
